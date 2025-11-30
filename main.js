@@ -57,15 +57,16 @@
             { name: 'React.js', icon: '⚛️', level: 95, category: 'frontend' },
             { name: 'Node.js', icon: '🟢', level: 90, category: 'backend' },
             { name: 'TypeScript', icon: '📘', level: 88, category: 'frontend' },
-            { name: 'AWS', icon: '☁️', level: 92, category: 'cloud' },
-            { name: 'Docker', icon: '🐳', level: 85, category: 'cloud' },
+            { name: 'PHP', icon: '🐘', level: 92, category: 'backend' },
+            // { name: 'Docker', icon: '🐳', level: 85, category: 'cloud' },
             { name: 'Python', icon: '🐍', level: 93, category: 'backend' },
-            { name: 'Kubernetes', icon: '☸️', level: 82, category: 'cloud' },
-            { name: 'GraphQL', icon: '◈', level: 87, category: 'backend' },
-            { name: 'TensorFlow', icon: '🤖', level: 78, category: 'emerging' },
-            { name: 'Blockchain', icon: '🔗', level: 75, category: 'emerging' },
+            //{ name: 'Kubernetes', icon: '☸️', level: 82, category: 'cloud' },
+            { name: 'Oracle Database', icon: '⛃', level: 87, category: 'database' },
+            //{ name: 'TensorFlow', icon: '🤖', level: 78, category: 'emerging' },
+            //{ name: 'Blockchain', icon: '🔗', level: 75, category: 'emerging' },
             { name: 'Vue.js', icon: '💚', level: 85, category: 'frontend' },
-            { name: 'MongoDB', icon: '🍃', level: 90, category: 'backend' }
+            { name: 'MS SQL', icon: '🍃', level: 90, category: 'database' }
+            
         ];
 
         // Scroll to section function
@@ -286,6 +287,7 @@
                     `;
                     
                     skillsGrid.appendChild(hexagon);
+                    
                 });
             }
             
@@ -470,3 +472,22 @@
                 parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
             }
         });
+
+        // View portfolio data
+        const ViewProfile = [
+            {
+                id: 1,
+                title: 'Chief Development Officer',
+                description: 'Oversees all technical aspects and technological resources of the company for growth and efficiency.',
+                image: 'images/kael.jpg',
+                tech: ['Web Developer', 'L1/L3 Application Support', 'IT Specialist']
+            },
+            {
+                id: 2,
+                title: 'Quantum Cloud',
+                description: 'Next-generation cloud infrastructure leveraging quantum computing for unprecedented processing power.',
+                image: 'images/quantum-cloud.jpg',
+                tech: ['AWS', 'Kubernetes', 'Docker']
+            }
+        ];
+
