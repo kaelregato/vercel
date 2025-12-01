@@ -1743,4 +1743,328 @@ a.info-item {
   0%   { --angle: 0deg; }
   100% { --angle: 360deg; }
 }
+/* GLOBAL MOBILE FIXES */
+@media (max-width: 600px) {
 
+    /* Remove all horizontal overflow */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* Reduce padding globally */
+    section {
+        padding: 60px 20px !important;
+    }
+
+    /* 
+       HEADER (Fix overlapping)
+        */
+    .nav-container {
+        padding: 15px 20px;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    /* 
+       HERO / CAROUSEL
+        */
+    .hero {
+        padding: 100px 10px 40px !important;
+    }
+
+    .carousel-container {
+        height: 420px !important;
+    }
+
+    .carousel-item {
+        width: 260px !important;
+        height: 350px !important;
+    }
+
+    .carousel-item .card {
+        padding: 15px !important;
+    }
+
+    .card-image {
+        height: 120px !important;
+    }
+
+    .card-title {
+        font-size: 16px !important;
+        letter-spacing: 1px;
+    }
+
+    .carousel-controls {
+        bottom: -40px;
+    }
+
+    /* 
+       ABOUT / PILLARS SECTION
+        */
+    .philosophy-headline {
+        font-size: 26px !important;
+    }
+
+    .philosophy-subheading {
+        font-size: 16px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .pillar {
+        padding: 25px 20px !important;
+    }
+
+    .pillar-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* 
+       SKILLS HEXAGON GRID
+        */
+    .skill-hexagon {
+        width: 120px !important;
+        height: 140px !important;
+        margin: 15px 5px !important;
+    }
+
+    .skill-icon-hex {
+        font-size: 28px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .skill-name-hex {
+        font-size: 12px !important;
+    }
+
+    /* 
+       CONTACT SECTION
+        */
+    .contact-container {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 25px !important;
+    }
+
+    .info-item {
+        padding: 15px !important;
+    }
+
+    .info-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    /* 
+       FOOTER
+        */
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        align-items: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* 
+       PROFILE MODAL
+        */
+    .profile-modal {
+        width: 90% !important;
+        max-height: 80vh !important;
+        padding: 20px !important;
+    }
+
+    .profile-header img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .skillset-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+/* ===========================
+   TABLET RESPONSIVE FIX
+   (600px – 1024px)
+   =========================== */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* GENERAL LAYOUT */
+    section {
+        padding: 80px 40px;
+    }
+
+    /* ======================
+       HEADER
+       ====================== */
+    .nav-container {
+        padding: 18px 30px;
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+
+    /* NAV MENU (tablet collapses to mobile-style) */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(18, 18, 18, 0.98);
+        padding: 40px 0;
+        text-align: center;
+        transition: 0.3s ease;
+    }
+
+    .nav-menu a {
+        padding: 18px 0;
+        font-size: 16px;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    /* ======================
+       HERO / CAROUSEL
+       ====================== */
+    .hero {
+        padding: 120px 30px 80px;
+    }
+
+    .carousel-container {
+        max-width: 90%;
+        height: 550px;
+    }
+
+    .carousel-item {
+        width: 330px;
+        height: 450px;
+    }
+
+    .carousel-item .card {
+        padding: 25px;
+    }
+
+    .card-image {
+        height: 160px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+
+    /* ======================
+       ABOUT / PILLARS
+       ====================== */
+    .philosophy-headline {
+        font-size: 42px;
+    }
+
+    .philosophy-subheading {
+        font-size: 18px;
+        margin-bottom: 60px;
+    }
+
+    .pillar {
+        padding: 35px 25px;
+    }
+
+    .pillar-icon {
+        width: 85px;
+        height: 85px;
+    }
+
+
+    /* ======================
+       SKILLS GRID
+       ====================== */
+    .skill-hexagon {
+        width: 170px;
+        height: 200px;
+        margin: 20px 10px;
+    }
+
+    .skill-icon-hex {
+        font-size: 40px;
+    }
+
+    .skill-name-hex {
+        font-size: 15px;
+    }
+
+
+    /* ======================
+       CONTACT
+       ====================== */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 35px;
+    }
+
+
+    /* ======================
+       FOOTER
+       ====================== */
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        text-align: left;
+    }
+
+    .footer-brand {
+        align-items: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+
+    /* ======================
+       PROFILE MODAL
+       ====================== */
+    .profile-modal {
+        width: 70%;
+        max-height: 80vh;
+        padding: 30px;
+    }
+
+    .skillset-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
