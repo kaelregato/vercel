@@ -22,6 +22,13 @@
 	--text-primary: #ffffff;
 	--text-secondary: #b0b0b0;
 	--text-dim: #808080;
+	--deep-ocean: #154c56;
+	--tidal-blue: #1b6d7f;
+	--ivory-sand: #fff4e5;
+	--goldan-dune: #d9b382;
+	--sky-mist: #9cb7c7;
+	--midnight: #1f2d33;
+	--blue-ash: #5a7381;
 }
 
 html {
@@ -29,7 +36,7 @@ html {
 }
 
 body {
-	font-family: 'Orbitron', 'Rajdhani', sans-serif;
+	font-family: 'Axiforma Regular';
 	background: var(--primary-black);
 	color: var(--text-primary);
 	overflow-x: hidden;
@@ -44,24 +51,7 @@ body::before {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background:
-		repeating-linear-gradient(0deg,
-			transparent,
-			transparent 2px,
-			rgba(255, 255, 255, 0.03) 2px,
-			rgba(255, 255, 255, 0.03) 4px),
-		repeating-linear-gradient(90deg,
-			transparent,
-			transparent 2px,
-			rgba(255, 255, 255, 0.03) 2px,
-			rgba(255, 255, 255, 0.03) 4px),
-		linear-gradient(135deg,
-			var(--primary-black) 0%,
-			var(--carbon-dark) 25%,
-			var(--carbon-medium) 50%,
-			var(--carbon-dark) 75%,
-			var(--primary-black) 100%);
-	z-index: -2;
+	background: #154c56;
 }
 
 /* Animated Grid Overlay */
@@ -91,6 +81,7 @@ body::after {
 	}
 }
 
+
 /* Loading Screen */
 .loader {
 	position: fixed;
@@ -115,73 +106,57 @@ body::after {
 	text-align: center;
 }
 
-.loader-prism {
-	width: 100px;
-	height: 100px;
-	position: relative;
-	margin: 0 auto 30px;
+.dots {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
 }
 
-.prism-face {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	border: 2px solid transparent;
-	transform-origin: center;
-	animation: prismRotate 3s linear infinite;
+.dots span {
+	width: 14px;
+	height: 14px;
+	background: #1b6d7f;
+	border-radius: 50%;
+	display: inline-block;
+	animation: dotPulse 0.6s infinite alternate;
 }
 
-.prism-face:nth-child(1) {
-	border-image: linear-gradient(45deg, var(--accent-red), var(--accent-blue)) 1;
-	animation-delay: 0s;
-}
-
-.prism-face:nth-child(2) {
-	border-image: linear-gradient(45deg, var(--accent-blue), var(--accent-green)) 1;
-	transform: rotate(60deg);
+.dots span:nth-child(2) {
 	animation-delay: 0.2s;
+
+
 }
 
-.prism-face:nth-child(3) {
-	border-image: linear-gradient(45deg, var(--accent-green), var(--accent-purple)) 1;
-	transform: rotate(120deg);
+.dots span:nth-child(3) {
 	animation-delay: 0.4s;
+
 }
 
-@keyframes prismRotate {
-	0% {
-		transform: rotate(0deg) scale(1);
+@keyframes dotPulse {
+	from {
+		transform: translateY(0);
+		opacity: 0.5;
 	}
-
-	50% {
-		transform: rotate(180deg) scale(1.2);
-	}
-
-	100% {
-		transform: rotate(360deg) scale(1);
+	to {
+		transform: translateY(-10px);
+		opacity: 1;
 	}
 }
+
 
 /* Navigation Header */
 .header {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background: linear-gradient(180deg,
-			rgba(18, 18, 18, 0.98) 0%,
-			rgba(18, 18, 18, 0.9) 50%,
-			rgba(18, 18, 18, 0) 100%);
-	backdrop-filter: blur(20px);
+	background: #154c56;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	z-index: 1000;
 	transition: all 0.3s ease;
 }
 
-.header.scrolled {
-	background: rgba(18, 18, 18, 0.98);
-	backdrop-filter: blur(30px);
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-}
+
 
 .nav-container {
 	max-width: 1400px;
@@ -266,6 +241,7 @@ body::after {
 	font-weight: 900;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+	font-family: 'Axiforma Semi-Bold';
 }
 
 .logo-text .prism {
@@ -286,6 +262,7 @@ body::after {
 	list-style: none;
 	gap: 10px;
 	align-items: center;
+	font-family: 'Axiforma Semi-Bold';
 }
 
 .nav-menu a {
@@ -308,7 +285,7 @@ body::after {
 	transform: translateX(-50%);
 	width: 0;
 	height: 2px;
-	background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+	background: linear-gradient(90deg, var(--sky-mist) , var(--tidal-blue));
 	transition: width 0.3s ease;
 }
 
@@ -397,7 +374,7 @@ body::after {
 .carousel-item .card {
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(135deg, var(--carbon-medium), var(--carbon-dark));
+	background: linear-gradient(135deg, var(--tidal-blue), var(--deep-ocean));
 	border: 2px solid var(--metal-dark);
 	border-radius: 20px;
 	padding: 30px;
@@ -472,7 +449,7 @@ body::after {
 	margin-bottom: 15px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	background: linear-gradient(135deg, var(--text-primary), var(--accent-purple));
+	background: var(--goldan-dune);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -482,7 +459,7 @@ body::after {
 	color: var(--text-secondary);
 	line-height: 1.6;
 	margin-bottom: 20px;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 .card-tech {
@@ -490,6 +467,7 @@ body::after {
 	flex-wrap: wrap;
 	gap: 8px;
 	margin-bottom: 20px;
+	
 }
 
 .tech-badge {
@@ -621,7 +599,7 @@ body::after {
 	height: 100%;
 	background: linear-gradient(90deg,
 			transparent,
-			var(--accent-red) 20%,
+			var(--accent-purple) 20%,
 			var(--accent-blue) 40%,
 			var(--accent-green) 60%,
 			var(--accent-purple) 80%,
@@ -647,12 +625,13 @@ body::after {
 	letter-spacing: 3px;
 	margin-bottom: 30px;
 	line-height: 1.2;
-	background: linear-gradient(135deg,
+	/* background: linear-gradient(135deg,
 			var(--accent-cyan) 0%,
 			var(--accent-purple) 25%,
 			var(--accent-blue) 50%,
 			var(--accent-green) 75%,
-			var(--accent-cyan) 100%);
+			var(--accent-cyan) 100%); */
+			background-color: #d9b382;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -980,7 +959,7 @@ body::after {
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	margin-bottom: 20px;
-	background: linear-gradient(135deg, var(--text-primary), var(--accent-purple));
+	background: linear-gradient(135deg, var(--sky-mist), var(--blue-ash));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
