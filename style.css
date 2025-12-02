@@ -36,7 +36,7 @@ html {
 }
 
 body {
-	font-family: 'Axiforma Regular';
+	font-family: 'Axiforma-semi-bold', sans-serif;
 	background: var(--primary-black);
 	color: var(--text-primary);
 	overflow-x: hidden;
@@ -241,7 +241,7 @@ body::after {
 	font-weight: 900;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	font-family: 'Axiforma Semi-Bold';
+	font-style: 'Axiforma regular';
 }
 
 .logo-text .prism {
@@ -249,6 +249,7 @@ body::after {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
+	font-style: 'Axiforma Semi-Bold';
 }
 
 .logo-text .flux {
